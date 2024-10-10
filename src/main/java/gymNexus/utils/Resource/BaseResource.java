@@ -2,6 +2,7 @@ package gymNexus.utils.Resource;
 
 import gymNexus.utils.Service.AbstractBaseService;
 import jakarta.websocket.server.PathParam;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,7 @@ public abstract class BaseResource<T,ID> {
     }
 
     @PostMapping
-    public ResponseEntity<T> create(@RequestBody T novoAcrescimo) {
+    public ResponseEntity<T> create(@RequestBody T novoAcrescimo) throws ServiceException {
         T acrescimo = (T) getService().save(novoAcrescimo);
         return ResponseEntity.status(HttpStatus.CREATED).body(acrescimo);
     }
