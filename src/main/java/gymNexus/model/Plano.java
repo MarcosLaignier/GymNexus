@@ -3,6 +3,7 @@ package gymNexus.model;
 import gymNexus.enums.AtivoInativoEnum;
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
@@ -14,6 +15,8 @@ public class Plano {
     private Integer id;
 
     private String nome;
+
+    private BigDecimal valor;
 
     @Temporal(TemporalType.DATE)
     private Date inicio;
@@ -43,6 +46,14 @@ public class Plano {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public BigDecimal getValor() {
+        return valor;
+    }
+
+    public void setValor(BigDecimal valor) {
+        this.valor = valor;
     }
 
     public Date getInicio() {
