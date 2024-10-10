@@ -1,6 +1,5 @@
 package gymNexus.utils;
 
-import gymNexus.model.Pessoa;
 import org.hibernate.service.spi.ServiceException;
 
 import java.util.List;

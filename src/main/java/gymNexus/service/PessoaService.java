@@ -2,7 +2,6 @@ package gymNexus.service;
 
 import gymNexus.repository.PessoaRepository;
 import gymNexus.utils.AbstractBaseService;
-import gymNexus.utils.BaseCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -2,7 +2,6 @@ package gymNexus.resource;
 
 import gymNexus.model.Pessoa;
 import gymNexus.service.PessoaService;
-import gymNexus.utils.AbstractBaseService;
 import gymNexus.utils.BaseResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
