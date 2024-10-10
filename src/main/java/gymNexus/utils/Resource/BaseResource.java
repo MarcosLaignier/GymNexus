@@ -14,13 +14,13 @@ public abstract class BaseResource<T,ID> {
 
     @GetMapping("/{id}")
     public ResponseEntity<T> findById(@PathParam("id") Integer id) {
-        T acrescimo = (T) getService().getRepository().getById(id);
+        T acrescimo = (T) getService().getById(id);
         return ResponseEntity.status(HttpStatus.OK).body(acrescimo);
     }
 
     @PostMapping
     public ResponseEntity<T> create(@RequestBody T novoAcrescimo) {
-        T acrescimo = (T) getService().getRepository().save(novoAcrescimo);
+        T acrescimo = (T) getService().save(novoAcrescimo);
         return ResponseEntity.status(HttpStatus.CREATED).body(acrescimo);
     }
 
