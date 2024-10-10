@@ -29,7 +29,7 @@ public class PlanoResource extends BaseResource<Plano, Integer> {
 
     @GetMapping
     public ResponseEntity<List<Pessoa>> findAll() {
-        List<Pessoa> acrescimos = service.getRepository().findAll();
+        List<Pessoa> acrescimos = service.findAll();
         return ResponseEntity.status(HttpStatus.OK).body(acrescimos);
     }
 

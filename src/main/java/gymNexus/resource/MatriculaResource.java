@@ -28,7 +28,7 @@ public class MatriculaResource extends BaseResource<Matricula, Integer> {
 
     @GetMapping
     public ResponseEntity<List<Matricula>> findAll() {
-        List<Matricula> acrescimos = service.getRepository().findAll();
+        List<Matricula> acrescimos = service.findAll();
         return ResponseEntity.status(HttpStatus.OK).body(acrescimos);
     }
 

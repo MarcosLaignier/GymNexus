@@ -1,12 +1,14 @@
 package gymNexus.service;
 
+import gymNexus.model.Pessoa;
 import gymNexus.repository.PessoaRepository;
 import gymNexus.utils.Service.AbstractBaseService;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PessoaService extends AbstractBaseService<PessoaRepository, Integer> {
+public class PessoaService extends AbstractBaseService<Pessoa, Integer> {
 
     @Autowired
     private PessoaRepository pessoaRepository;
@@ -14,5 +16,10 @@ public class PessoaService extends AbstractBaseService<PessoaRepository, Integer
     @Override
     public PessoaRepository getRepository() {
         return pessoaRepository;
+    }
+
+    @Override
+    protected void validate(Pessoa entity) throws ServiceException {
+        super.validate(entity);
     }
 }

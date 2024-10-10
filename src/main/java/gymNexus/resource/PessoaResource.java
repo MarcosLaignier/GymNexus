@@ -28,7 +28,7 @@ public class PessoaResource extends BaseResource<Pessoa, Integer> {
 
         @GetMapping
     public ResponseEntity<List<Pessoa>> findAll() {
-        List<Pessoa> acrescimos = pessoaService.getRepository().findAll();
+        List<Pessoa> acrescimos = pessoaService.findAll();
         return ResponseEntity.status(HttpStatus.OK).body(acrescimos);
     }
 }
