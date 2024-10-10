@@ -1,5 +1,6 @@
-package gymNexus.utils;
+package gymNexus.utils.Resource;
 
+import gymNexus.utils.Service.AbstractBaseService;
 import jakarta.websocket.server.PathParam;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

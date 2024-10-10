@@ -1,4 +1,4 @@
-package gymNexus.utils;
+package gymNexus.utils.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

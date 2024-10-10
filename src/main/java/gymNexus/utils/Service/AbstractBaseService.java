@@ -1,5 +1,6 @@
-package gymNexus.utils;
+package gymNexus.utils.Service;
 
+import gymNexus.utils.Repository.BaseCrudRepository;
 import org.hibernate.service.spi.ServiceException;
 
 import java.util.List;

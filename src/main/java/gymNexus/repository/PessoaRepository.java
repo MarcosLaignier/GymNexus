@@ -1,7 +1,7 @@
 package gymNexus.repository;
 
 import gymNexus.model.Pessoa;
-import gymNexus.utils.BaseCrudRepository;
+import gymNexus.utils.Repository.BaseCrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository

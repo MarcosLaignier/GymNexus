@@ -1,9 +1,8 @@
 package gymNexus.resource;
 
 import gymNexus.model.Matricula;
-import gymNexus.model.Matricula;
 import gymNexus.service.MatriculaService;
-import gymNexus.utils.BaseResource;
+import gymNexus.utils.Resource.BaseResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

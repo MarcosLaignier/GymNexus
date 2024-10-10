@@ -2,7 +2,7 @@ package gymNexus.service;
 
 import gymNexus.model.Plano;
 import gymNexus.repository.PlanoRepository;
-import gymNexus.utils.AbstractBaseService;
+import gymNexus.utils.Service.AbstractBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
