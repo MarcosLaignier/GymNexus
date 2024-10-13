@@ -2,6 +2,7 @@ package gymNexus.model;
 
 import gymNexus.enums.AtivoInativoEnum;
 import gymNexus.enums.TipoPessoaEnum;
+import gymNexus.utils.Validate.ValidateField;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -14,12 +15,16 @@ public class Pessoa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @ValidateField(message = "O Nome deve ser Informado!")
     private String nome;
 
+    @ValidateField(message = "O Documento deve ser Informado!")
     private String documento;
 
+    @ValidateField(message = "A Data de Nascimento deve ser Informada!")
     private Date nascimento;
 
+    @ValidateField(message = "O Tipo deve ser Informado!")
     @Enumerated(EnumType.STRING)
     private TipoPessoaEnum tipoPessoa;
 

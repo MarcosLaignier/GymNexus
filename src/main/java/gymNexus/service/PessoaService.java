@@ -3,7 +3,7 @@ package gymNexus.service;
 import gymNexus.model.Pessoa;
 import gymNexus.repository.PessoaRepository;
 import gymNexus.utils.Service.AbstractBaseService;
-import gymNexus.utils.ValidateMetodsUtils;
+import gymNexus.utils.Validate.ValidateMetodsUtils;
 import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,13 +27,7 @@ public class PessoaService extends AbstractBaseService<Pessoa, Integer> {
     @Override
     protected void validate(Pessoa entity) throws ServiceException {
 
-        List<String> fieldsToValidate = Arrays.asList(
-                "nome",
-                "documento",
-                "nascimento",
-                "tipoPessoa",
-                "situacao");
-        ValidateMetodsUtils.validateFieldsNonNull(entity,fieldsToValidate);
+        ValidateMetodsUtils.validateFieldsNonNull(entity);
 
         super.validate(entity);
     }
