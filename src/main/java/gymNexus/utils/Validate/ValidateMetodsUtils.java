@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 public class ValidateMetodsUtils {
 
     /** Metodo responsavel por validar os fields anotados com @ValidadeField
-     * para nao serem null ou vazios
+     * para nao serem null ou vazios e retornar a mensagem de erro
      *
      * @param entity
      * @param <T>
