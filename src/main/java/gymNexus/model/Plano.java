@@ -2,10 +2,15 @@ package gymNexus.model;
 
 import gymNexus.enums.AtivoInativoEnum;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
+
+@Getter
+@Setter
 @Entity
 @Table(name ="plano")
 public class Plano {
@@ -29,62 +34,5 @@ public class Plano {
     @Version
     private Integer versao = 0;
 
-    // Getters e Setters
 
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public BigDecimal getValor() {
-        return valor;
-    }
-
-    public void setValor(BigDecimal valor) {
-        this.valor = valor;
-    }
-
-    public Date getInicio() {
-        return inicio;
-    }
-
-    public void setInicio(Date inicio) {
-        this.inicio = inicio;
-    }
-
-    public Date getFim() {
-        return fim;
-    }
-
-    public void setFim(Date fim) {
-        this.fim = fim;
-    }
-
-    public AtivoInativoEnum getSituacao() {
-        return situacao;
-    }
-
-    public void setSituacao(AtivoInativoEnum situacao) {
-        this.situacao = situacao;
-    }
-
-    public Integer getVersao() {
-        return versao;
-    }
-
-    public void setVersao(Integer versao) {
-        this.versao = versao;
-    }
 }
