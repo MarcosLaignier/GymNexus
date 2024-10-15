@@ -1,6 +1,7 @@
 package gymNexus.model;
 
 import gymNexus.enums.AtivoInativoEnum;
+import gymNexus.utils.Validate.ValidateField;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,10 +20,14 @@ public class Plano {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @ValidateField(message = "O nome do plano deve ser informado!")
     private String nome;
 
+    @ValidateField(message = "O valor do plano deve ser informado!")
     private BigDecimal valor;
 
+
+    @ValidateField(message = "Informe a data de início do plano.")
     @Temporal(TemporalType.DATE)
     private Date inicio;
 
