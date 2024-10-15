@@ -24,10 +24,12 @@ public class Pessoa {
     @ValidateField(message = "O Nome deve ser Informado!")
     private String nome;
 
+    @Column(unique = true)
     @ValidateField(message = "O Documento deve ser Informado!")
     private String documento;
 
     @ValidateField(message = "A Data de Nascimento deve ser Informada!")
+    @Temporal(TemporalType.DATE)
     private Date nascimento;
 
 
